@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Bhumika's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+  <link rel="stylesheet" href="Contact.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in"><span>Bhumika</span></div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="About.html">About</a></div>
+        <div class="link"><a href="Skills.html">Skills</a></div>
+        <div class="link"><a href="Experience.html">Experience</a></div>
+        <div class="link"><a href="Projects.html">Academic Projects</a></div>
+        <div class="link contact-btn"><a href="Contact.html">Contact Me</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Projects.html">Academic Projects</a>
+        <a href="Contact.html">Contact Me</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1 data-aos="fade-up">Get in Touch</h1>
+
+    <div class="contact-container">
+
+      <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+        <p><i class="fas fa-envelope"></i> venkatabhumikaguthi@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +1 (815) 549-1364</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/venkata-bhumika-guthi-357a08208/" target="_blank">LinkedIn Profile</a></p>
+      </div>
+
+      <form class="contact-form" action="https://portfolio-backend-ekw2.onrender.com/contact" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      
+      
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

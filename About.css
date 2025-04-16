@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+  color: black;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  background: transparent;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.logo span {
+  color: rgb(109,67,0);
+  text-shadow: 0 0 10px rgb(109,67,0);
+}
+
+.hamburg, .cancel {
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: none;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  position: relative;
+}
+
+.link a:hover::before {
+  width: 100%;
+}
+
+.link a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(109,67,0);
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-btn {
+  padding: 5px 20px;
+  border: 2px solid rgb(109,67,0);
+  border-radius: 20px;
+}
+
+.contact-btn a {
+  color: white;
+}
+
+.contact-btn:hover {
+  background-color: rgb(109,67,0);
+}
+
+.contact-btn:hover a {
+  color: white;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.dropdown .links a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.dropdown .links a:hover {
+  background-color: rgb(109,67,0);
+}
+
+.about-section {
+  padding: 5vh 10vw;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 800px;
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgb(109,67,0);
+  text-shadow: 0 0 5px rgb(109,67,0);
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+/* Responsive */
+
+@media (max-width: 884px) {
+  .links {
+    display: none;
+  }
+
+  .hamburg, .cancel {
+    display: block;
+  }
+
+  .logo {
+    position: absolute;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .about-section {
+    padding: 5vh 5vw;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+
+  .cancel {
+    color: white;
+  }
+}

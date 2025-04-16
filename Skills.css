@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+  color: black;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  background: transparent;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: black;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.logo span {
+  color: rgb(109,67, 0);
+  text-shadow: 0 0 10px rgb(109,67, 0);
+}
+
+.hamburg, .cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: black;
+  font-size: 2rem;
+  display: none;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  position: relative;
+}
+
+.link a:hover::before {
+  width: 100%;
+}
+
+.link a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(109,67,0);
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-btn {
+  padding: 5px 20px;
+  border: 2px solid rgb(109,67,0);
+  border-radius: 20px;
+}
+
+.contact-btn a {
+  color: white;
+}
+
+.contact-btn:hover {
+  background-color: rgb(109,67,0);
+}
+
+.contact-btn:hover a {
+  color: white;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.dropdown .links a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.dropdown .links a:hover {
+  background-color: rgb(109,67,0);
+}
+
+.skills-section {
+  padding: 5vh 10vw;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-section h1 {
+  font-size: 2.5rem;
+  color: rgb(109,67,0);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgb(109,67,0);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border: 2px solid rgb(109,67,0);
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(109,67,0);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.skill-item i {
+  font-size: 1.8rem;
+}
+
+.skill-item:hover {
+  background-color: rgb(109,67,0);
+  color: white;
+  box-shadow: 0 0 15px rgb(109,67,0);
+}
+
+@media (max-width: 884px) {
+  .links {
+    display: none;
+  }
+
+  .hamburg, .cancel {
+    display: block;
+  }
+
+  .logo {
+    position: absolute;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .cancel {
+    color: white;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

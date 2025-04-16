@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Bhumika's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="Experience.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in"><span>Bhumika</span></div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="About.html">About</a></div>
+        <div class="link"><a href="Skills.html">Skills</a></div>
+        <div class="link"><a href="Experience.html">Experience</a></div>
+        <div class="link"><a href="Projects.html">Academic Projects</a></div>
+        <div class="link contact-btn"><a href="Contact.html">Contact Me</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Projects.html">Academic Projects</a>
+        <a href="Contact.html">Contact Me</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="experience-section">
+    <h1 data-aos="fade-up">Professional Experience</h1>
+
+    <div class="experience-container">
+
+      <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+        <h2>AI Integration Intern <span>@ VillageCore</span></h2>
+        <p class="duration">Jan 2025 – Present</p>
+        <ul>
+         <!--<li>Developed AI-powered chatbots automating 80% of user interactions, improving engagement & workflow.</li>-->
+          <li>Enhanced user retention by 20% by optimizing website/app interfaces and analyzing survey data.</li>
+          <li>Improved content reach by 30% using AI trend analysis and automated content distribution.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+        <h2>Graduate Engineer Trainee <span>@ LTIMindtree</span></h2>
+        <p class="duration">Feb 2023 – May 2023</p>
+        <ul>
+          <li>Completed intensive cloud training & SQL-based analytics.</li>
+          <li>Processed 100,000+ records in hands-on projects to boost data efficiency by 20%.</li>
+          <li>Strengthened cloud architecture and security knowledge through mentorship-based learning.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
+        <h2>Hackathon Participant <span>@ Riktam Technologies</span></h2>
+        <p class="duration">Nov 2022</p>
+        <ul>
+          <li>Built a full-stack web app (HTML, CSS, PHP) in 48 hours with 30% boost in user engagement.</li>
+          <li>Wrote 1500+ lines of optimized code; ranked top in a competition of 100+ participants.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

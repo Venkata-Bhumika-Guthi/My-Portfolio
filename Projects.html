@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Bhumika's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+  <link rel="stylesheet" href="Projects.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in"><span>Bhumika</span></div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="About.html">About</a></div>
+        <div class="link"><a href="Skills.html">Skills</a></div>
+        <div class="link"><a href="Experience.html">Experience</a></div>
+        <div class="link"><a href="Projects.html">Academic Projects</a></div>
+        <div class="link contact-btn"><a href="Contact.html">Contact Me</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Projects.html">Academic Projects</a>
+        <a href="Contact.html">Contact Me</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="projects-section">
+    <h1 data-aos="fade-up">Academic Projects</h1>
+    <div class="projects-container">
+
+      <div class="project" data-aos="fade-up" data-aos-delay="100">
+        <h2>🎬 Oscars Data Visualization</h2>
+        <p><strong>Tech Stack:</strong> JavaScript, SVG</p>
+        <ul>
+          <li>Developed an interactive web-based visualization to analyze Oscar trends over time.</li>
+          <li>Implemented custom SVG visualizations to explore category shifts and top-winning films.</li>
+        </ul>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="200">
+        <h2>📱 Android App: Contacts Manager</h2>
+        <p><strong>Tech Stack:</strong> Java, SQLite, Android Studio</p>
+        <ul>
+          <li>Built a contact management app with real-time search and autocomplete functionality.</li>
+          <li>Reduced search time by 30%, improving user navigation efficiency.</li>
+        </ul>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="300">
+        <h2>🏏 Android App: Indian Cricket Team</h2>
+        <p><strong>Tech Stack:</strong> Java, Android Studio</p>
+        <ul>
+          <li>Designed a grid-based profile interface showcasing 50+ cricket players with detailed stats.</li>
+          <li>Optimized layout for responsive visualization and quick data access.</li>
+        </ul>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="400">
+        <h2>📰 Android App: News Stream</h2>
+        <p><strong>Tech Stack:</strong> Java, Retrofit, JSON, Live News API</p>
+        <ul>
+          <li>Created a real-time news aggregator with seamless API integration.</li>
+          <li>Achieved a 25% improvement in response time, ensuring smooth content updates.</li>
+        </ul>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="500">
+        <h2>🌫 Fog Removal & Vehicle Detection</h2>
+        <p><strong>Tech Stack:</strong> Python, OpenCV, YOLO V4</p>
+        <ul>
+          <li>Enhanced real-time navigation by applying fog removal via Dark Channel Prior technique.</li>
+          <li>Trained a vehicle detection system using YOLO V4 with 90% accuracy.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>
